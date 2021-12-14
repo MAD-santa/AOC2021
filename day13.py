@@ -11,7 +11,6 @@ f = open("day13list.txt", "r")
 inputData = []
 dots = []
 foldInstructions = []
-bp = 0
 for row in f:
     row = row.replace('\n', '')
     inputData.append(row)
@@ -26,8 +25,6 @@ for row in dots:
         maxX = row[0]
     if row[1] > maxY:
         maxY = row[1]
-# PART 1
-
 dotMap = {}
 for y in range(maxY+1):
     dotMap[y] = []
