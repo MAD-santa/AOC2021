@@ -31,7 +31,6 @@ for x in range(len(measurements) - 2):
         counter += 1
     lastWindow = currentWindow
 print("Part 2: " + str(counter))
-f.close()
 end = current_milli_time()
 print(str(end - start) + "ms")
 f.close()
