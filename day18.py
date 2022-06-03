@@ -1,3 +1,11 @@
+import time
+
+
+def current_milli_time():
+    return round(time.time() * 1000)
+start = current_milli_time()
+
+
 f = open("day18list.txt", "r")
 inputData = []
 for row in f:
@@ -225,7 +233,7 @@ for i in range(len(inputData)-1):
         afterAdd = []
         afterAdd = [one]+[two]
 
-magnitude = afterAdd.copy()
+finalsum = afterAdd.copy()
 
 
 def magcalc(nest):
@@ -240,7 +248,11 @@ def magcalc(nest):
         right = nest[1]*2
         return left+right
 
-print(magnitude)
-print(magcalc(magnitude))
-print(magnitude)
+
+magnitude = magcalc(finalsum)
+
+print(f"The answer for part 1 is {magnitude}")
+
+end = current_milli_time()
+print(str(end - start) + "ms")
 f.close()
